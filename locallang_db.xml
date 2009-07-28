@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'kiwi_gigs'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tt_content.list_type_pi1">Gig Lister</label>
+			<label index="tt_content.list_type_pi2">Gig Teaser</label>
+			<label index="tx_kiwigigs_main">Gigs</label>
+			<label index="tx_kiwigigs_main.title">Title</label>
+			<label index="tx_kiwigigs_main.date">Date</label>
+			<label index="tx_kiwigigs_main.location">Location</label>
+			<label index="tx_kiwigigs_main.city">City</label>
+			<label index="tx_kiwigigs_main.description">Description</label>
+			<label index="tx_kiwigigs_main.flyer">Flyer</label>
+			<label index="tx_kiwigigs_main.location_address">Location Address</label>
+			<label index="tx_kiwigigs_main.location_zip">Location Zip</label>
+			<label index="tx_kiwigigs_main.location_url">Location Website</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tt_content.list_type_pi1">Gig Lister</label>
+			<label index="tt_content.list_type_pi2">Gig Teaser</label>
+			<label index="tx_kiwigigs_main">Auftritte</label>
+			<label index="tx_kiwigigs_main.title">Titel</label>
+			<label index="tx_kiwigigs_main.date">Datum</label>
+			<label index="tx_kiwigigs_main.location">Location / Club / Auftrittsort</label>
+			<label index="tx_kiwigigs_main.city">Stadt</label>
+			<label index="tx_kiwigigs_main.description">Beschreibung</label>
+			<label index="tx_kiwigigs_main.flyer">Flyer</label>
+			<label index="tx_kiwigigs_main.location_address">Location Adresse</label>
+			<label index="tx_kiwigigs_main.location_zip">Location PLZ</label>
+			<label index="tx_kiwigigs_main.location_url">Location Webseite</label>
+		</languageKey>
+	</data>
+</T3locallang>

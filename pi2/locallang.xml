@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_kiwigigs_pi2&quot;</description>
+	</meta>
+	<data type="array">
+		<!-- ENGLISH -->
+		<languageKey index="default" type="array">
+			<label index="teaser_headline">Next Gigs</label>
+		</languageKey>
+		
+		<!-- GERMAN -->
+		<languageKey index="default" type="array">
+			<label index="teaser_headline">Anstehende Auftritte</label>
+		</languageKey>
+	</data>
+</T3locallang>

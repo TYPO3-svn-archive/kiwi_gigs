@@ -1,0 +1,41 @@
+plugin.tx_kiwigigs_pi1 {
+	#-- TEMPLATE FILE
+	templateFile = EXT:kiwi_gigs/pi1/kiwi_gigs_pi1.tmpl
+	
+	#-- SHOW PASSED GIGS IN LISTVIEW?
+	showPassedGigs = 1
+	
+	#-- SHOW GOOGLE MAP IF ADDRESS SAVED?
+	showMap = 1
+	
+	#-- GOOGLE MAPS SETTINGS
+	gmaps {
+		apiKey = ABQIAAAA-P19PqIIhkHgP8NEHF0iTRQ-LHYwFNYHfjwyFgv55tD357ml9xR0hHvb8_qhfoES3KOr4WUC16qX3A
+		width = 490
+		height = 250
+		zoomLevel = 12 
+		disableMapControls = 1
+		enableTypeControls = 1
+	}
+	
+	#-- THUMBNAIL
+	listview.thumbnail = IMAGE
+	listview.thumbnail {
+		file.maxW = 40
+	}
+	
+	#-- FLYER
+	singleview.flyer = IMAGE
+	singleview.flyer {
+		file.maxW = 500
+		imageLinkWrap = 1
+		imageLinkWrap.enable = 1
+	}
+	
+	#-- BACKLINK ICON
+	singleview.backlinkIcon = IMAGE
+	singleview.backlinkIcon {
+		file = EXT:kiwi_gigs/res/images/backlink.gif
+	}
+	
+}

@@ -1,0 +1,13 @@
+plugin.tx_kiwigigs_pi2 {
+	#-- TEMPLATE FILE
+	templateFile = EXT:kiwi_gigs/pi2/kiwi_gigs_pi2.tmpl
+	
+	#-- SINGLEVIEW PID
+	singleviewPID = 42
+	
+	#- NUMBER OF COMING GIGS TO SHOW
+	numberOfGigs = 3
+	
+	
+	
+}
