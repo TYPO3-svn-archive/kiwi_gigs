@@ -10,7 +10,7 @@ plugin.tx_kiwigigs_pi1 {
 	
 	#-- GOOGLE MAPS SETTINGS
 	gmaps {
-		apiKey = ABQIAAAA-P19PqIIhkHgP8NEHF0iTRQ-LHYwFNYHfjwyFgv55tD357ml9xR0hHvb8_qhfoES3KOr4WUC16qX3A
+		apiKey = 
 		width = 490
 		height = 250
 		zoomLevel = 12 
