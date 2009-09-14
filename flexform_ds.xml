@@ -1,0 +1,55 @@
+<T3DataStructure>
+<sheets>	
+	<MAIN>
+		<ROOT>
+			<TCEforms>
+				<sheetTitle>LLL:EXT:kiwi_gigs/pi2/locallang.xml:ff.main</sheetTitle>
+			</TCEforms>
+			<type>array</type>
+			<el>
+				
+				<teaserEntries>
+					<TCEforms>
+						<label>LLL:EXT:kiwi_gigs/pi2/locallang.xml:ff.teaserEntries</label>
+						<config>
+							<type>input</type>
+							<size>3</size>
+							<eval>int</eval>
+							<range type="array">
+								<upper>999</upper>
+								<lower>0</lower>
+							</range>
+						</config>
+					</TCEforms>
+				</teaserEntries>
+				
+				<!--
+				<entriesFrom>
+					<TCEforms>
+						<label>LLL:EXT:kiwi_gigs/pi2/locallang.xml:ff.entriesFrom</label>
+						<config>
+							<type>input</type>
+							<size>10</size>
+							<eval>date</eval>
+						</config>
+					</TCEforms>
+				</entriesFrom>
+				
+				
+				<entriesUntil>
+					<TCEforms>
+						<label>LLL:EXT:kiwi_gigs/pi2/locallang.xml:ff.entriesUntil</label>
+						<config>
+							<type>input</type>
+							<size>10</size>
+							<eval>date</eval>
+						</config>
+					</TCEforms>
+				</entriesUntil>
+				-->
+			</el>
+		</ROOT>
+	</MAIN>
+	
+</sheets>
+</T3DataStructure>

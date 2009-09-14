@@ -7,11 +7,19 @@
 	<data type="array">
 		<!-- ENGLISH -->
 		<languageKey index="default" type="array">
+			<label index="ff.main">General</label>
+			<label index="ff.teaserEntries">Show X gigs</label>
+			<label index="ff.entriesFrom">Entries start date</label>
+			<label index="ff.entriesUntil">Entries end date</label>
 			<label index="teaser_headline">Next Gigs</label>
 		</languageKey>
 		
 		<!-- GERMAN -->
 		<languageKey index="default" type="array">
+			<label index="ff.main">Allgemein</label>
+			<label index="ff.teaserEntries">Zeige X Gigs</label>
+			<label index="ff.entriesFrom">Startdatum</label>
+			<label index="ff.entriesUntil">Enddatum</label>
 			<label index="teaser_headline">Anstehende Auftritte</label>
 		</languageKey>
 	</data>

@@ -59,6 +59,31 @@ class tx_kiwigigs_pi2 extends tslib_pibase {
 		$this->cssFile = t3lib_extMgm::siteRelPath($this->extKey).'res/css/kiwi_gigs.css';
 		$GLOBALS['TSFE']->additionalHeaderData[$this->prefixId] .= '<link rel="stylesheet" type="text/css" href="'.$this->cssFile.'" />';
 		
+		// get startingpoint
+		$pages = $this->cObj->data['pages'] ? $this->cObj->data['pages'] : ( $this->conf['dataPids'] ? $this->conf['dataPids'] : $GLOBALS['TSFE']->id);
+		$this->pids = $this->pi_getPidList($pages, $this->cObj->data['recursive']);
+		
+		/**********************************************
+		* Get flexform data
+		**********************************************/ 
+		// Init and get the flexform data of the plugin
+		$this->pi_initPIflexForm(); 
+		
+		// Assign the flexform data to a local variable for easier access
+		$piFlexForm = $this->cObj->data['pi_flexform'];
+		
+		// Traverse the entire flexform array based on the language
+		// and write the content to an array
+		if (is_array($piFlexForm['data'])) {
+			foreach ( $piFlexForm['data'] as $sheet => $data ) {
+				foreach ( $data as $lang => $value ) {
+					foreach ( $value as $key => $val ) {
+						$this->ffdata[$key] = $this->pi_getFFvalue($piFlexForm, $key, $sheet);
+					}
+				}
+			}
+		}
+		
 		#require_once(t3lib_extMgm::extPath('kiwi_gigs').'pi1/class.tx_kiwigigs_pi1.php');
 		#$gigLister = t3lib_div::makeInstance('tx_kiwigigs_pi1');
 		#debug($gigLister);
@@ -78,11 +103,14 @@ class tx_kiwigigs_pi2 extends tslib_pibase {
  	*/ 
  	function teaserview() {
 		
+		$limit = $this->ffdata['teaserEntries'] ? $this->ffdata['teaserEntries'] : $this->conf['numberOfGigs'];
+		
 		// get next shows from db
 		$fields = '*';
  		$where = 'date >= '.strtotime('tomorrow');
+		$where .= ' AND pid in('.$this->pids.') ';
  		$where .= $this->cObj->enableFields($this->table);
- 		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery($fields,$this->table,$where,$groupBy='',$orderBy='',$limit=$this->conf['numberOfGigs']);
+ 		$res = $GLOBALS['TYPO3_DB']->exec_SELECTquery($fields,$this->table,$where,$groupBy='',$orderBy='',$limit);
  		$anz = $GLOBALS['TYPO3_DB']->sql_num_rows($res);
 		// return empty content if no future gigs found
 		if ($anz == 0) return '';

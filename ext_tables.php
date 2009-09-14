@@ -39,4 +39,13 @@ $TCA["tx_kiwigigs_main"] = array (
 		"fe_admin_fieldList" => "hidden, title, date, location, city, description, flyer, location_address, location_zip, location_url",
 	)
 );
+
+
+// Show FlexForm field in plugin configuration
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_pi2']='pi_flexform';
+
+// Configure FlexForm field
+t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_pi2','FILE:EXT:kiwi_gigs/flexform_ds.xml');
+
+
 ?>
